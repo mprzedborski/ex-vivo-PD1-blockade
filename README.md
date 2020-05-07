@@ -4,4 +4,4 @@ This is the code for running the simulations for the manuscript:
 
 The authors of the code are Michelle Przedborski and Moriah Pellowe. 
 
-Details and comments are included in the file "Main.m", which simulates the experimental ex vivo treatment protocol.
+Details and comments are included in the file "Main.m". Simply run Main.m to simulate the experimental ex vivo treatment protocols (cytokine experiments and flow cytometry experiments).

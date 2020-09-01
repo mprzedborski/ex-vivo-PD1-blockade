@@ -39,7 +39,7 @@ t_scale = 12*60;  %Time scale
 %Experimental parameters:
 total_cells_cyto = 1e5;   %Cell numbers
 total_cells_flow = 2e6;   %Cell numbers
-nivo_0 = 132e-6;     %pg/ml
+nivo_0 = 132e6;     %pg/ml
 
 %--------------------------------------------------------------------------
 % Scaled parameter values: (parameters described below)

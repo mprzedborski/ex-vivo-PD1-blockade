@@ -2,10 +2,10 @@
 %
 % Name: Main.m
 % Code authors: Michelle Przedborski, Moriah Pellowe
-% Last updated: May 7, 2020
+% Last updated: Sept. 21, 2020
 %
 % This script will simulate the ex vivo experimental treatment protocols on
-% the PD-1 network described in the manuscript:
+% the PD-1 network described in the manuscripts:
 % "Integrating an ex vivo human tumor model with systems biology for the 
 % study of PD-1 blockade response dynamics in head and neck squamous cell 
 % carcinoma (HNSCC).", authored by:  
@@ -14,6 +14,13 @@
 % Basavaraja U. Shanthappa, Vidushi Kapoor, Kodaganur S. Gopinath, D.C. 
 % Doval, K.S. Sabitha, Gaspar Taroncher-Oldenburg, Biswanath Majumder, 
 % Pradip Majumder, Mohammad Kohandel, and Aaron Goldman   
+% 
+% and
+%
+% "Systems biology informed neural networks (SBINN) predict response and 
+% novel combinations for PD-1 checkpoint blockade", authored by:
+% Michelle Przedborski, Munisha Smalley, Saravanan Thiyagarajan, Aaron 
+% Goldman, and Mohammad Kohandel
 %
 % Input: parameter set as described below (parameters with values >= 0)
 % Output: (1) cytokine expression levels during PD-1 blockade cytokine 
@@ -26,7 +33,7 @@
 %       are measured relative to initial levels (except the protein 
 %       complexes).
 %       To convert the parameter values that are here to the same units as
-%       stated in the manuscript, use the following conversions:
+%       stated in the manuscripts, use the following conversions:
 %       -to get to units of " /day", multiply by 2; 
 %       -to get to units of " /min", multiply by (2/(24*60)), i.e. divide
 %       by (12*60)
@@ -44,6 +51,7 @@ nivo_0 = 132e6;     %pg/ml
 %--------------------------------------------------------------------------
 % Scaled parameter values: (parameters described below)
 %--------------------------------------------------------------------------
+%Nominal parameter set 1:
 pars = [0.448, 1.537, 3339.162, 0.114,...
         0.1266, 0.01769, 0.02389, 0.02024,...
         0.003494, 0.01886, 0.01766, 0.01803,...
@@ -57,6 +65,21 @@ pars = [0.448, 1.537, 3339.162, 0.114,...
         0.1266, 0.0008437, 0.7585, 0.001736,...
         48.515, 2.1451, 19.433, 0.8121,...
         0.0003879, 0.0008561];	
+
+%Nominal parameter set 2:
+%pars = [0.3841, 1.759, 7626.7, 0.6158,...
+%        0.01454, 0.004104, 0.003837, 0.004142,...
+%        0.03440, 0.01850, 0.01930, 0.01907,...
+%        0.005930, 0.03721, 0.03676, 0.01774,...
+%        0.01866, 0.0001785, 0.0004442, 0.0001927,...
+%        0.004429, 0.0009432, 0.5018, 0.5575,...
+%        0.5040, 0.3471, 0.02370, 167.46,...
+%        0.8554, 0.4133, 1.8092, 0.02372,...
+%        153.18, 0.05040, 1.9716, 0.1958,...
+%        3.3052, 155.32, 55.080, 7185.59,...
+%        0.6563, 0.0004924, 1.2541, 0.0007668,...
+%        0.004498, 0.9604, 2.2115, 0.3038,...
+%        0.002087, 0.007910];
 
 %--------------------------------------------------------------------------
 % Initial cytokine levels (for cytokine experiments)
